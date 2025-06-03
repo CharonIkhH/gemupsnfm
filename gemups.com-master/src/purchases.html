@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/basic/head.html',{
+   "title":"",
+   "desc":"",
+   "keys":"",
+   "ogtype":"",
+   "ogurl":"",
+   "ogtitle":"",
+   "ogdescription":"",
+   "ogsitename":"",
+   "ogimage":"",
+})
+<body>
+
+   <div class="page__wrapper">
+      @@include('html/components/sideNavDesktop.html',{})
+      <div class="main__content">
+         @@include('html/basic/header-auth.html', {})
+         <main>
+            @@include('html/components/breadcrumbs.html', {
+               "name":"My purchases"
+            })
+            @@include('html/components/headers/page-header.html',{
+               "name":"My purchases"
+            })
+            <section id="tabData" class="contentFilter container">
+              <div class="tabs">
+                <div class="tabs__nav">
+                  <button class="tabs__button active" data-tab="All">All</button>
+                  <button class="tabs__button" data-tab="Proxy">Proxy</button>
+                  <button class="tabs__button" data-tab="Accounts">Accounts</button>
+                  <button class="tabs__button" data-tab="Services">Services</button>
+                </div>
+                <div class="tabs__content">
+                  <div class="table__head">
+                    <div class="head__title">Name</div>
+                    <div class="head__title">Amount</div>
+                    <div class="head__title">Dates</div>
+                    <div class="head__title">Action</div>
+                  </div>
+
+                  <div class="table__content">
+
+                    <div class="element__line activated" data-category="All Proxy">
+                      <div class="content__data">
+                        <span class="name">Аккаунты Telegram RU 1шт tdata для Telegram Portable exe - Ручная, Отлежка: 10 дн+, Пол: mix. AccsFarm</span>
+                        <span class="value green">10 000 / 18 000</span>
+                        <span class="value green">12.05.2024 / 30 days</span>
+                        <div class="actions">
+                          <button type="button"><i class="ico-cart"></i></button>
+                          <a href="#" title="name"><i class="ico-eye"></i></a>
+                        </div>
+                      </div>
+                      <div class="mainData">
+                        <span class="service">Proxy [Residential]</span>
+                        <span class="shop">NVS Shop</span>
+                      </div>
+                    </div>
+                    @@include('html/components/tables/line-deactive.html',{
+                      'name':'Аккаунты Telegram RU 1шт tdata для Telegram Portable exe - Ручная, Отлежка: 10 дн+, Пол: mix. AccsFarm',
+                      'category':'Proxy',
+                      'shop':'NVS Shop'
+                    })
+                    @@include('html/components/tables/line-deactive.html',{
+                      'name':'Аккаунты Telegram RU 1шт tdata для Telegram Portable exe - Ручная, Отлежка: 10 дн+, Пол: mix. AccsFarm',
+                      'category':'Proxy'
+                    })
+                    @@include('html/components/tables/line-deactive.html',{
+                      'name':'Аккаунты Telegram RU 1шт tdata для Telegram Portable exe - Ручная, Отлежка: 10 дн+, Пол: mix. AccsFarm',
+                      'category':'Accounts'
+                    })
+                    @@include('html/components/tables/line-deactive.html',{
+                      'name':'Аккаунты Telegram RU 1шт tdata для Telegram Portable exe - Ручная, Отлежка: 10 дн+, Пол: mix. AccsFarm',
+                      'category':'Proxy'
+                    })
+                    @@include('html/components/tables/line-active.html',{
+                      'name':'Аккаунты Telegram RU 1шт tdata для Telegram Portable exe - Ручная, Отлежка: 10 дн+, Пол: mix. AccsFarm',
+                      'category':'Services',
+                      'shop':'Shop Name'
+                    })
+                    @@include('html/components/tables/line-active.html',{
+                      'name':'Аккаунты Telegram RU 1шт tdata для Telegram Portable exe - Ручная, Отлежка: 10 дн+, Пол: mix. AccsFarm',
+                      'category':'Accounts',
+                      'shop':'Shop Name'
+                    })
+                    @@include('html/components/tables/line-active.html',{
+                      'name':'Аккаунты Telegram RU 1шт tdata для Telegram Portable exe - Ручная, Отлежка: 10 дн+, Пол: mix. AccsFarm',
+                      'category':'Proxy',
+                      'shop':'Shop Name'
+                    })
+                    @@include('html/components/tables/line-active.html',{
+                      'name':'Аккаунты Telegram RU 1шт tdata для Telegram Portable exe - Ручная, Отлежка: 10 дн+, Пол: mix. AccsFarm',
+                      'category':'Services',
+                      'shop':'Shop Name'
+                    })
+                    @@include('html/components/tables/line-active.html',{
+                      'name':'Аккаунты Telegram RU 1шт tdata для Telegram Portable exe - Ручная, Отлежка: 10 дн+, Пол: mix. AccsFarm',
+                      'category':'Accounts',
+                      'shop':'Shop Name'
+                    })
+                    @@include('html/components/tables/line-active.html',{
+                      'name':'Аккаунты Telegram RU 1шт tdata для Telegram Portable exe - Ручная, Отлежка: 10 дн+, Пол: mix. AccsFarm',
+                      'category':'Proxy',
+                      'shop':'Shop Name'
+                    })
+                    @@include('html/components/tables/line-active.html',{
+                      'name':'Аккаунты Telegram RU 1шт tdata для Telegram Portable exe - Ручная, Отлежка: 10 дн+, Пол: mix. AccsFarm',
+                      'category':'Services',
+                      'shop':'Shop Name'
+                    })
+
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <script>
+              const tabButtons = document.querySelectorAll('.tabs__button');
+              const contentElements = document.querySelectorAll('.table__content > div');
+
+              tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                  // Удаляем класс active у всех кнопок
+                  tabButtons.forEach(btn => btn.classList.remove('active'));
+                  button.classList.add('active');
+
+                  const selectedTab = button.dataset.tab;
+
+                  contentElements.forEach(el => {
+                    const categories = el.dataset.category.split(' '); // разбиваем по пробелу
+                    if (categories.includes(selectedTab)) {
+                      el.style.display = '';
+                    } else {
+                      el.style.display = 'none';
+                    }
+                  });
+                });
+              });
+
+              // Показываем все элементы при загрузке (по умолчанию активен All)
+              document.addEventListener('DOMContentLoaded', () => {
+                tabButtons[0].click(); // эмулируем клик по кнопке "All"
+              });
+            </script>
+
+         </main>
+         @@include('html/basic/footer.html',{})
+      </div>
+   </div>
+</body>
+</html>

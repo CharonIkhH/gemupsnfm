@@ -6,6 +6,13 @@
     margin-bottom: 1.25rem;
     border-bottom: 1px solid $gray-stoke;
     position: relative;
+    overflow: hidden;
+    overflow-x: scroll;
+    scrollbar-width: none; // полностью скрывает
+    -ms-overflow-style: none; // IE и Edge Legacy
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   &__button {

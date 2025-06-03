@@ -1,14 +1,4 @@
-// src/js/modules/langSwitcher.js
-
-/**
- * МОДУЛЬ ЯЗЫКОВОГО ПЕРЕКЛЮЧАТЕЛЯ (Language Switcher)
- * ============================================================
- * - Поддержка мобильных и десктопных устройств
- * - Чистый экспорт для использования в app.js
- * - Можно расширить для интеграции с i18n
- */
-
-export function init() {
+document.addEventListener('DOMContentLoaded', function () {
   const langSwitchBlocks = document.querySelectorAll('.lang__switch');
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
@@ -26,7 +16,6 @@ export function init() {
       currentLang.querySelector('span').textContent = item.textContent;
       // Скрываем список
       langList.classList.remove('active');
-      // TODO: Можно добавить интеграцию с i18n здесь
     }
 
     if (isMobile) {
@@ -62,4 +51,4 @@ export function init() {
       });
     }
   });
-}
+});
