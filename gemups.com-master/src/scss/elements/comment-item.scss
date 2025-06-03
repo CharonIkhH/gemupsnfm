@@ -1,0 +1,127 @@
+.comment__item {
+   display: flex;
+   flex-direction: row;
+   gap: 1.5rem;
+   justify-content: space-between;
+   align-items: flex-start;
+   background-color: $black-elementBG;
+   padding: 1.5rem;
+   border-radius: 1rem;
+   .ava__wrapper {
+      width: auto;
+      position: relative;
+      img {
+         border-radius: 50%;
+         width: 3.25rem;
+         height: 3.25rem;
+         object-fit: cover;
+         object-position: center;
+      }
+      i {
+         font-size: 1rem;
+         padding: .35rem;
+         position: absolute;
+         bottom: -.5rem;
+         right: -.5rem;
+         color: $main-Green;
+         background-color: #0B3E30;
+         border: 2px solid $body-bg;
+         border-radius: 50%;
+      }
+   }
+   .comment__data {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      width: 75%;
+      .name {
+         @include adaptiv-font(1.25,1.05);
+         line-height: 125%;
+         font-weight: 700;
+      }
+      .subject {
+         font-weight: 700;
+         text-transform: uppercase;
+         color: $text-secondory;
+         line-height: 125%;
+         @include adaptiv-font(1,.95);
+         margin-bottom: 0.5rem;
+      }
+      .comment__body {
+         display: flex;
+         flex-direction: column;
+         gap: 0.5rem;
+         .title {
+            color: $text-secondory;
+            line-height: 100%;
+            @include adaptiv-font(.95,.9);
+            font-weight: 500;
+         }
+         .comment__text {
+            @include adaptiv-font(.9,.85);
+            color: $text-secondory;
+            line-height: 160%;
+            font-weight: 400;
+         }
+      }
+   }
+   .comment__details {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      justify-content: flex-end;
+      width: auto;
+      .rating {
+         display: flex;
+         flex-direction: row;
+         gap: 0.35rem;
+         align-items: center;
+         justify-content: flex-end;
+         .value {
+            color: #fff;
+            @include adaptiv-font(.9,.8);
+         }
+         .stars__wrapper {
+            display: flex;
+            gap: 0.1rem;
+            .ico-star {
+            color: $text-secondory;
+            @include adaptiv-font(.9,.8);
+               &.active {
+                  color: $main-Green;
+               }
+            }
+         }
+      }
+      .date {
+         display: flex;
+         span {
+            color: $text-secondory;
+            @include adaptiv-font(.75,.75);
+            white-space: nowrap;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 767px) {
+   .comment__item {
+   gap: 1rem;
+   flex-wrap: wrap;
+   align-items: center;
+   padding: 1rem;
+   .ava__wrapper {
+      order: 1;
+   }
+   .comment__data {
+      width: 100%;
+      order: 3;
+      .subject {
+         margin-bottom: 0.25rem;
+      }
+   }
+   .comment__details {
+      order: 2;
+   }
+}
+}

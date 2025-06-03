@@ -1,0 +1,37 @@
+<section id="myMaterials">
+   <div class="myMaterials__wrapper container">
+      @@include('../components/headers/section-header.html',{
+         "head":"Полезные материалы",
+         "text":"<p>Вы можете ознакомиться с уже реализованными проектами нашей компании. Каждый проект выполнен “под ключ” от стадии проектирования до полноценного вводу в эксплуатацию.</p>",
+      })
+      <div class="myMaterials__objects">
+         @@include('../components/cards/myMaterial.html',{
+            "img":"@img/proj2.jpg",
+            "date":"12.12.2024",
+            "time":"5-7 минут",
+            "title":"Реализация сушильного комплекса мощностью 150 кВт и котельной",
+            "color":"orange",
+            "label":"Статья",
+         })
+         @@include('../components/cards/myMaterial.html',{
+            "img":"@img/proj2.jpg",
+            "date":"12.12.2024",
+            "time":"5-7 минут",
+            "title":"Реализация сушильного комплекса мощностью 150 кВт и котельной",
+            "color":"green",
+            "label":"Новость",
+         })
+         @@include('../components/cards/myMaterial.html',{
+            "img":"@img/proj2.jpg",
+            "date":"12.12.2024",
+            "time":"5-7 минут",
+            "title":"Реализация сушильного комплекса мощностью 150 кВт и котельной",
+            "color":"orange",
+            "label":"Статья",
+         })
+      </div>
+      <div class="action">
+         <a href="#" class="btn-line" title=""><span class="icon-apps-add"></span> Больше материалов</a>
+      </div>
+   </div>
+</section>

@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/basic/head.html',{
+   "title":"",
+   "desc":"",
+   "keys":"",
+   "ogtype":"",
+   "ogurl":"",
+   "ogtitle":"",
+   "ogdescription":"",
+   "ogsitename":"",
+   "ogimage":"",
+})
+<body>
+
+   <div class="page__wrapper">
+      @@include('html/components/sideNavDesktop.html',{})
+      <div class="main__content">
+         @@include('html/basic/header-auth.html', {})
+         <main>
+            @@include('html/components/breadcrumbs.html', {
+               "name":"Proxy"
+            })
+            @@include('html/components/headers/page-header.html',{
+               "name":"Proxy"
+            })
+            <div class="product__filters container">
+               <div class="filter__tags">
+                  <button class="filter-btn active" data-filter="Residential">Residential</button>
+                  <button class="filter-btn" data-filter="Isp">Isp</button>
+                  <button class="filter-btn" data-filter="Datacenter">Datacenter</button>
+                  <button class="filter-btn" data-filter="Nodepay">Nodepay</button>
+                  <button class="filter-btn" data-filter="Grass">Grass</button>
+               </div>
+               <div class="full__filters">
+                  <button class="see-all" data-filter="">See all</button>
+               </div>
+            </div>
+
+            <section class="container" id="products__container">
+               <div class="product__category" data-tags="Residential">
+                  <div class="head__block">
+                     <h2 class="category__title">Residential</h2>
+                  </div>
+                  <div class="products__items">
+                                          <div class="product__item">
+                        <a class="product" href="#" title="name">
+                           <div class="product__wrapper">
+                              <div class="product__tags">
+                                 <span class="tag icon"><i class="ico-shield"></i></span>
+                                 <span class="tag active">Name</span>
+                                 <span class="tag">Name</span>
+                              </div>
+                              <div class="product__data">
+                                 <div class="product__img">
+                                    <img src="@img/tests/product.png" alt="name">
+                                 </div>
+                                 <div class="data__wrapper">
+                                    <div class="left__side">
+                                       <div class="rating__wrapper">
+                                          <i class="ico-star"></i>
+                                          <span class="rating">5</span>
+                                       </div>
+                                       <span class="name">Proxy</span>
+                                    </div>
+                                    <div class="right__side">
+                                       <div class="avatars__wrapper">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                       </div>
+                                       <span class="seller">5 sellers</span>
+                                    </div>
+                                 </div>
+                                 <div class="content__area">
+                                    <span class="name">Datacenter Proxy From Bob</span>
+                                    <div class="sub__content">
+                                       <p>Unlimited IPs + Sessions. Pay only for gb.</p>
+                                    </div>
+                                    <button class="openContent"><i class="ico-arrow"></i></button>
+                                 </div>
+                              </div>
+                              <div class="buttom">
+                                 <div class="price">
+                                    <span class="currency">$</span>
+                                    <span class="value">0,30</span>
+                                 </div>
+                                 <div class="itemsLeft">
+                                    <span class="desk">Only <span>1k</span> pcs left</span>
+                                    <div class="progress-bar" style="--remaining: 75%;">
+                                    <div class="remaining"></div>
+                                    <span class="value">75%</span>
+                                 </div>
+                                 </div>
+                                 <div class="order__action">
+                                    <button><i class="ico-cart"></i></button>
+                                    <div class="order__counter">
+                                       <form action="">
+                                          <button>-</button>
+                                          <input type="text" placeholder="1">
+                                          <button>+</button>
+                                       </form>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                                          <div class="product__item">
+                        <a class="product" href="#" title="name">
+                           <div class="product__wrapper">
+                              <div class="product__tags">
+                                 <span class="tag icon"><i class="ico-shield"></i></span>
+                                 <span class="tag active">Name</span>
+                                 <span class="tag">Name</span>
+                              </div>
+                              <div class="product__data">
+                                 <div class="product__img">
+                                    <img src="@img/tests/product.png" alt="name">
+                                 </div>
+                                 <div class="data__wrapper">
+                                    <div class="left__side">
+                                       <div class="rating__wrapper">
+                                          <i class="ico-star"></i>
+                                          <span class="rating">5</span>
+                                       </div>
+                                       <span class="name">Proxy</span>
+                                    </div>
+                                    <div class="right__side">
+                                       <div class="avatars__wrapper">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                       </div>
+                                       <span class="seller">5 sellers</span>
+                                    </div>
+                                 </div>
+                                 <div class="content__area">
+                                    <span class="name">Datacenter Proxy From Bob</span>
+                                    <div class="sub__content">
+                                       <p>Unlimited IPs + Sessions. Pay only for gb.</p>
+                                    </div>
+                                    <button class="openContent"><i class="ico-arrow"></i></button>
+                                 </div>
+                              </div>
+                              <div class="buttom">
+                                 <div class="price">
+                                    <span class="currency">$</span>
+                                    <span class="value">0,30</span>
+                                 </div>
+                                 <div class="itemsLeft">
+                                    <span class="desk">Only <span>1k</span> pcs left</span>
+                                    <div class="progress-bar" style="--remaining: 75%;">
+                                    <div class="remaining"></div>
+                                    <span class="value">75%</span>
+                                 </div>
+                                 </div>
+                                 <div class="order__action">
+                                    <button><i class="ico-cart"></i></button>
+                                    <div class="order__counter">
+                                       <form action="">
+                                          <button>-</button>
+                                          <input type="text" placeholder="1">
+                                          <button>+</button>
+                                       </form>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                                          <div class="product__item">
+                        <a class="product" href="#" title="name">
+                           <div class="product__wrapper">
+                              <div class="product__tags">
+                                 <span class="tag icon"><i class="ico-shield"></i></span>
+                                 <span class="tag active">Name</span>
+                                 <span class="tag">Name</span>
+                              </div>
+                              <div class="product__data">
+                                 <div class="product__img">
+                                    <img src="@img/tests/product.png" alt="name">
+                                 </div>
+                                 <div class="data__wrapper">
+                                    <div class="left__side">
+                                       <div class="rating__wrapper">
+                                          <i class="ico-star"></i>
+                                          <span class="rating">5</span>
+                                       </div>
+                                       <span class="name">Proxy</span>
+                                    </div>
+                                    <div class="right__side">
+                                       <div class="avatars__wrapper">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                       </div>
+                                       <span class="seller">5 sellers</span>
+                                    </div>
+                                 </div>
+                                 <div class="content__area">
+                                    <span class="name">Datacenter Proxy From Bob</span>
+                                    <div class="sub__content">
+                                       <p>Unlimited IPs + Sessions. Pay only for gb.</p>
+                                    </div>
+                                    <button class="openContent"><i class="ico-arrow"></i></button>
+                                 </div>
+                              </div>
+                              <div class="buttom">
+                                 <div class="price">
+                                    <span class="currency">$</span>
+                                    <span class="value">0,30</span>
+                                 </div>
+                                 <div class="itemsLeft">
+                                    <span class="desk">Only <span>1k</span> pcs left</span>
+                                    <div class="progress-bar" style="--remaining: 75%;">
+                                    <div class="remaining"></div>
+                                    <span class="value">75%</span>
+                                 </div>
+                                 </div>
+                                 <div class="order__action">
+                                    <button><i class="ico-cart"></i></button>
+                                    <div class="order__counter">
+                                       <form action="">
+                                          <button>-</button>
+                                          <input type="text" placeholder="1">
+                                          <button>+</button>
+                                       </form>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                                          <div class="product__item">
+                        <a class="product" href="#" title="name">
+                           <div class="product__wrapper">
+                              <div class="product__tags">
+                                 <span class="tag icon"><i class="ico-shield"></i></span>
+                                 <span class="tag active">Name</span>
+                                 <span class="tag">Name</span>
+                              </div>
+                              <div class="product__data">
+                                 <div class="product__img">
+                                    <img src="@img/tests/product.png" alt="name">
+                                 </div>
+                                 <div class="data__wrapper">
+                                    <div class="left__side">
+                                       <div class="rating__wrapper">
+                                          <i class="ico-star"></i>
+                                          <span class="rating">5</span>
+                                       </div>
+                                       <span class="name">Proxy</span>
+                                    </div>
+                                    <div class="right__side">
+                                       <div class="avatars__wrapper">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                       </div>
+                                       <span class="seller">5 sellers</span>
+                                    </div>
+                                 </div>
+                                 <div class="content__area">
+                                    <span class="name">Datacenter Proxy From Bob</span>
+                                    <div class="sub__content">
+                                       <p>Unlimited IPs + Sessions. Pay only for gb.</p>
+                                    </div>
+                                    <button class="openContent"><i class="ico-arrow"></i></button>
+                                 </div>
+                              </div>
+                              <div class="buttom">
+                                 <div class="price">
+                                    <span class="currency">$</span>
+                                    <span class="value">0,30</span>
+                                 </div>
+                                 <div class="itemsLeft">
+                                    <span class="desk">Only <span>1k</span> pcs left</span>
+                                    <div class="progress-bar" style="--remaining: 75%;">
+                                    <div class="remaining"></div>
+                                    <span class="value">75%</span>
+                                 </div>
+                                 </div>
+                                 <div class="order__action">
+                                    <button><i class="ico-cart"></i></button>
+                                    <div class="order__counter">
+                                       <form action="">
+                                          <button>-</button>
+                                          <input type="text" placeholder="1">
+                                          <button>+</button>
+                                       </form>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                                          <div class="product__item">
+                        <a class="product" href="#" title="name">
+                           <div class="product__wrapper">
+                              <div class="product__tags">
+                                 <span class="tag icon"><i class="ico-shield"></i></span>
+                                 <span class="tag active">Name</span>
+                                 <span class="tag">Name</span>
+                              </div>
+                              <div class="product__data">
+                                 <div class="product__img">
+                                    <img src="@img/tests/product.png" alt="name">
+                                 </div>
+                                 <div class="data__wrapper">
+                                    <div class="left__side">
+                                       <div class="rating__wrapper">
+                                          <i class="ico-star"></i>
+                                          <span class="rating">5</span>
+                                       </div>
+                                       <span class="name">Proxy</span>
+                                    </div>
+                                    <div class="right__side">
+                                       <div class="avatars__wrapper">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                       </div>
+                                       <span class="seller">5 sellers</span>
+                                    </div>
+                                 </div>
+                                 <div class="content__area">
+                                    <span class="name">Datacenter Proxy From Bob</span>
+                                    <div class="sub__content">
+                                       <p>Unlimited IPs + Sessions. Pay only for gb.</p>
+                                    </div>
+                                    <button class="openContent"><i class="ico-arrow"></i></button>
+                                 </div>
+                              </div>
+                              <div class="buttom">
+                                 <div class="price">
+                                    <span class="currency">$</span>
+                                    <span class="value">0,30</span>
+                                 </div>
+                                 <div class="itemsLeft">
+                                    <span class="desk">Only <span>1k</span> pcs left</span>
+                                    <div class="progress-bar" style="--remaining: 75%;">
+                                    <div class="remaining"></div>
+                                    <span class="value">75%</span>
+                                 </div>
+                                 </div>
+                                 <div class="order__action">
+                                    <button><i class="ico-cart"></i></button>
+                                    <div class="order__counter">
+                                       <form action="">
+                                          <button>-</button>
+                                          <input type="text" placeholder="1">
+                                          <button>+</button>
+                                       </form>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="product__category" data-tags="Datacenter">
+                  <div class="head__block">
+                     <h2 class="category__title">Datacenter</h2>
+                  </div>
+                  <div class="products__items">
+                     <div class="product__item">
+                        <a class="product" href="#" title="name">
+                           <div class="product__wrapper">
+                              <div class="product__tags">
+                                 <span class="tag icon"><i class="ico-shield"></i></span>
+                                 <span class="tag active">Name</span>
+                                 <span class="tag">Name</span>
+                              </div>
+                              <div class="product__data">
+                                 <div class="product__img">
+                                    <img src="@img/tests/product.png" alt="name">
+                                 </div>
+                                 <div class="data__wrapper">
+                                    <div class="left__side">
+                                       <div class="rating__wrapper">
+                                          <i class="ico-star"></i>
+                                          <span class="rating">5</span>
+                                       </div>
+                                       <span class="name">Proxy</span>
+                                    </div>
+                                    <div class="right__side">
+                                       <div class="avatars__wrapper">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                       </div>
+                                       <span class="seller">5 sellers</span>
+                                    </div>
+                                 </div>
+                                 <div class="content__area">
+                                    <span class="name">Datacenter Proxy From Bob</span>
+                                    <div class="sub__content">
+                                       <p>Unlimited IPs + Sessions. Pay only for gb.</p>
+                                    </div>
+                                    <button class="openContent"><i class="ico-arrow"></i></button>
+                                 </div>
+                              </div>
+                              <div class="buttom">
+                                 <div class="price">
+                                    <span class="currency">$</span>
+                                    <span class="value">0,30</span>
+                                 </div>
+                                 <div class="itemsLeft">
+                                    <span class="desk">Only <span>1k</span> pcs left</span>
+                                    <div class="progress-bar" style="--remaining: 75%;">
+                                    <div class="remaining"></div>
+                                    <span class="value">75%</span>
+                                 </div>
+                                 </div>
+                                 <div class="order__action">
+                                    <button><i class="ico-cart"></i></button>
+                                    <div class="order__counter">
+                                       <form action="">
+                                          <button>-</button>
+                                          <input type="text" placeholder="1">
+                                          <button>+</button>
+                                       </form>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                                          <div class="product__item">
+                        <a class="product" href="#" title="name">
+                           <div class="product__wrapper">
+                              <div class="product__tags">
+                                 <span class="tag icon"><i class="ico-shield"></i></span>
+                                 <span class="tag active">Name</span>
+                                 <span class="tag">Name</span>
+                              </div>
+                              <div class="product__data">
+                                 <div class="product__img">
+                                    <img src="@img/tests/product.png" alt="name">
+                                 </div>
+                                 <div class="data__wrapper">
+                                    <div class="left__side">
+                                       <div class="rating__wrapper">
+                                          <i class="ico-star"></i>
+                                          <span class="rating">5</span>
+                                       </div>
+                                       <span class="name">Proxy</span>
+                                    </div>
+                                    <div class="right__side">
+                                       <div class="avatars__wrapper">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                       </div>
+                                       <span class="seller">5 sellers</span>
+                                    </div>
+                                 </div>
+                                 <div class="content__area">
+                                    <span class="name">Datacenter Proxy From Bob</span>
+                                    <div class="sub__content">
+                                       <p>Unlimited IPs + Sessions. Pay only for gb.</p>
+                                    </div>
+                                    <button class="openContent"><i class="ico-arrow"></i></button>
+                                 </div>
+                              </div>
+                              <div class="buttom">
+                                 <div class="price">
+                                    <span class="currency">$</span>
+                                    <span class="value">0,30</span>
+                                 </div>
+                                 <div class="itemsLeft">
+                                    <span class="desk">Only <span>1k</span> pcs left</span>
+                                    <div class="progress-bar" style="--remaining: 75%;">
+                                    <div class="remaining"></div>
+                                    <span class="value">75%</span>
+                                 </div>
+                                 </div>
+                                 <div class="order__action">
+                                    <button><i class="ico-cart"></i></button>
+                                    <div class="order__counter">
+                                       <form action="">
+                                          <button>-</button>
+                                          <input type="text" placeholder="1">
+                                          <button>+</button>
+                                       </form>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                        <div class="product__item">
+                        <a class="product" href="#" title="name">
+                           <div class="product__wrapper">
+                              <div class="product__tags">
+                                 <span class="tag icon"><i class="ico-shield"></i></span>
+                                 <span class="tag active">Name</span>
+                                 <span class="tag">Name</span>
+                              </div>
+                              <div class="product__data">
+                                 <div class="product__img">
+                                    <img src="@img/tests/product.png" alt="name">
+                                 </div>
+                                 <div class="data__wrapper">
+                                    <div class="left__side">
+                                       <div class="rating__wrapper">
+                                          <i class="ico-star"></i>
+                                          <span class="rating">5</span>
+                                       </div>
+                                       <span class="name">Proxy</span>
+                                    </div>
+                                    <div class="right__side">
+                                       <div class="avatars__wrapper">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                       </div>
+                                       <span class="seller">5 sellers</span>
+                                    </div>
+                                 </div>
+                                 <div class="content__area">
+                                    <span class="name">Datacenter Proxy From Bob</span>
+                                    <div class="sub__content">
+                                       <p>Unlimited IPs + Sessions. Pay only for gb.</p>
+                                    </div>
+                                    <button class="openContent"><i class="ico-arrow"></i></button>
+                                 </div>
+                              </div>
+                              <div class="buttom">
+                                 <div class="price">
+                                    <span class="currency">$</span>
+                                    <span class="value">0,30</span>
+                                 </div>
+                                 <div class="itemsLeft">
+                                    <span class="desk">Only <span>1k</span> pcs left</span>
+                                    <div class="progress-bar" style="--remaining: 75%;">
+                                    <div class="remaining"></div>
+                                    <span class="value">75%</span>
+                                 </div>
+                                 </div>
+                                 <div class="order__action">
+                                    <button><i class="ico-cart"></i></button>
+                                    <div class="order__counter">
+                                       <form action="">
+                                          <button>-</button>
+                                          <input type="text" placeholder="1">
+                                          <button>+</button>
+                                       </form>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                                          <div class="product__item">
+                        <a class="product" href="#" title="name">
+                           <div class="product__wrapper">
+                              <div class="product__tags">
+                                 <span class="tag icon"><i class="ico-shield"></i></span>
+                                 <span class="tag active">Name</span>
+                                 <span class="tag">Name</span>
+                              </div>
+                              <div class="product__data">
+                                 <div class="product__img">
+                                    <img src="@img/tests/product.png" alt="name">
+                                 </div>
+                                 <div class="data__wrapper">
+                                    <div class="left__side">
+                                       <div class="rating__wrapper">
+                                          <i class="ico-star"></i>
+                                          <span class="rating">5</span>
+                                       </div>
+                                       <span class="name">Proxy</span>
+                                    </div>
+                                    <div class="right__side">
+                                       <div class="avatars__wrapper">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                          <img src="@img/tests/ava.png" alt="name">
+                                       </div>
+                                       <span class="seller">5 sellers</span>
+                                    </div>
+                                 </div>
+                                 <div class="content__area">
+                                    <span class="name">Datacenter Proxy From Bob</span>
+                                    <div class="sub__content">
+                                       <p>Unlimited IPs + Sessions. Pay only for gb.</p>
+                                    </div>
+                                    <button class="openContent"><i class="ico-arrow"></i></button>
+                                 </div>
+                              </div>
+                              <div class="buttom">
+                                 <div class="price">
+                                    <span class="currency">$</span>
+                                    <span class="value">0,30</span>
+                                 </div>
+                                 <div class="itemsLeft">
+                                    <span class="desk">Only <span>1k</span> pcs left</span>
+                                    <div class="progress-bar" style="--remaining: 75%;">
+                                    <div class="remaining"></div>
+                                    <span class="value">75%</span>
+                                 </div>
+                                 </div>
+                                 <div class="order__action">
+                                    <button><i class="ico-cart"></i></button>
+                                    <div class="order__counter">
+                                       <form action="">
+                                          <button>-</button>
+                                          <input type="text" placeholder="1">
+                                          <button>+</button>
+                                       </form>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </main>
+         @@include('html/basic/footer.html',{})
+      </div>
+   </div>
+   <script>
+    import { init, showSystemMessage, openModal, closeModal } from './modules/modals.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  init();
+  // Пример уведомления:
+  showSystemMessage('Welcome!', 'success');
+  // Открыть модалку:
+  // openModal('#myModal');
+});
+
+</script>
+</body>
+</html>

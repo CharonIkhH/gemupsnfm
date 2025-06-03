@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/basic/head.html',{
+   "title":"",
+   "desc":"",
+   "keys":"",
+   "ogtype":"",
+   "ogurl":"",
+   "ogtitle":"",
+   "ogdescription":"",
+   "ogsitename":"",
+   "ogimage":"",
+})
+<body>
+
+   <div class="page__wrapper">
+      @@include('html/components/sideNavDesktop.html',{})
+      <div class="main__content">
+         @@include('html/basic/header-noauth.html', {})
+         <main>
+            <h1>Content</h1>
+         </main>
+         @@include('html/basic/footer.html',{})
+      </div>
+   </div>
+   <script>
+    import { init, showSystemMessage, openModal, closeModal } from './modules/modals.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  init();
+  // Пример уведомления:
+  showSystemMessage('Welcome!', 'success');
+  // Открыть модалку:
+  // openModal('#myModal');
+});
+
+</script>
+</body>
+</html>

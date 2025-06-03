@@ -1,0 +1,310 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="files/swiper-bundle.min.css">
+<link rel="stylesheet" href="files/venobox.min.css">
+<link rel="stylesheet" href="files/hystmodal.min.css">
+<link rel="stylesheet" href="files/slimselect.css">
+<link rel="stylesheet" href="css/style.min.css">
+   <title></title>
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta property="og:type" content="">
+   <meta property="og:url" content="">
+   <meta property="og:title" content="">
+   <meta property="og:description" content="">
+   <meta property="og:site_name" content=""/>
+   <meta property="og:image" content="">
+</head>
+<body>
+
+   <div class="page__wrapper">
+      <div class="fixedNavmenu">
+  <div class="head__block">
+    <div class="logo__wrapper">
+      <a href="/" titile="main">
+        <img class="logo__element" src="img/logo/logo_icon.svg" alt="name">
+        <img class="logo__text" src="img/logo/logo_text.svg" alt="name">
+      </a>
+    </div>
+    <button class="menuFunction"><i class="ico-burger-nav"></i></button>
+    <button class="menuMinimal hidden"><i class="ico-burger-mb"></i></button>
+  </div>
+
+  <div class="sidebar__element">
+    <div class="headline">Menu</div>
+    <nav class="sidebarNav">
+      <ul>
+        <li class="sidenav__element active">
+          <span><i class="ico-category"></i>KYC Service</span>
+        </li>
+        <li class="sidenav__element collapsed">
+          <button>
+            <div class="name">
+              <i class="ico-users"></i>
+              Accounts
+            </div>
+            <i class="ico-arrow"></i>
+          </button>
+        </li>
+        <li class="sidenav__element">
+          <a href="#" title="name">
+            <i class="ico-shield"></i>Proxy
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="sidebar__element">
+    <div class="headline">General</div>
+    <nav class="sidebarNav">
+      <ul>
+        <li class="sidenav__element">
+          <a href="#" title="name">
+            <i class="ico-refresh"></i>History
+          </a>
+        </li>
+        <li class="sidenav__element">
+          <a href="#" title="name">
+            <i class="ico-details"></i>Help
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+
+</div>
+      <div class="main__content">
+          <header class="noauth">
+   <div class="header__wrapper">
+      <div class="leftSide">
+         <a href="#" title="name">
+            <img src="img/logo/logo_icon.svg" alt="name">
+         </a>
+      </div>
+      <div class="rightSide">
+                  <div class="lang__switch">
+            <div class="currect__lang">
+               <span>EN</span>
+               <i class="ico-arrow"></i>
+            </div>
+            <div class="lang__list">
+               <ul class="">
+                  <li class="lang__item active">EN</li>
+                  <li class="lang__item">RU</li>
+                  <li class="lang__item">KZ</li>
+                  <li class="lang__item">FR</li>
+               </ul>
+            </div>
+         </div>
+                  <div class="auth__actions">
+            <a class="btn-main" href="/login.html" title="name">Login</a>
+            <a class="btn-line" href="/register.html" title="name">Register</a>
+         </div>
+         <div class="cart__wrapper">
+            <button class="cart">
+               <i class="ico-cart"></i>
+               <div class="count__lable">
+                  <span>0</span>
+               </div>
+            </button>
+         </div>
+                  <div class="burger__wrapper">
+            <i class="ico-burger-mb"></i>
+         </div> 
+      </div>
+      <div class="mobileMenu__wrapper">
+         <div class="head__area">
+                     <div class="lang__switch">
+            <div class="currect__lang">
+               <span>EN</span>
+               <i class="ico-arrow"></i>
+            </div>
+            <div class="lang__list">
+               <ul class="">
+                  <li class="lang__item active">EN</li>
+                  <li class="lang__item">RU</li>
+                  <li class="lang__item">KZ</li>
+                  <li class="lang__item">FR</li>
+               </ul>
+            </div>
+         </div>
+            <button class="closeMenu">
+               <i class="ico-close"></i>
+            </button>
+         </div>
+         <div class="mainMenu__wrapper">
+            <div class="menu__element">
+               <span class="menuHead">Menu</span>
+               <nav class="mobNav__wrapper">
+                  <ul class="mobNav">
+                     <li class="mobNav__item">
+                        <i class="ico-shield"></i>
+                        <a href="#" title="name">Proxy</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="menu__element">
+               <span class="menuHead">Support</span>
+               <nav class="mobNav__wrapper">
+                  <ul class="mobNav">
+                     <li class="mobNav__item">
+                        <i class="ico-details"></i>
+                        <a href="#" title="name">Help</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
+          <main>
+                        <div class="breadcrumbs">
+               <div class="breadcrumbs-wrapper container">
+                  <ol itemscope itemtype="http://schema.org/BreadcrumbList">
+                     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                     <a itemprop="item" href="#">
+                        <span class="name" itemprop="name">Home</span>
+                        <i class="ico-arrow"></i>
+                     </a>
+                     <meta itemprop="position" content="1" />
+                     </li>
+                     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+                        <span class="active">Login</span>
+                        <meta itemprop="position" content="2" />
+                     </li>
+                  </ol>
+               </div>
+            </div>
+            <div class="fullscreen container">
+                <div class="form__wrapper">
+                    <div class="form__header">
+                        <h1>Login</h1>
+                        <p>Дополнительный вспомогательный текст при необходимости.</p>
+                    </div>
+                    <form class="formBody" id="auth">
+                            <div class="form__fields">
+                                <!-- Username/Email field -->
+                                <div class="form-control form-control--fullwidth">
+  <div class="text-field">
+    <input id="username-email" class="input-base__input" type="text" name="email" placeholder="" required>
+    <label for="username-email" class="text-field__label">Username or Email</label>
+  </div>
+</div>                            
+                                <!-- Password field -->
+                                <div class="form-control form-control--fullwidth">
+  <div class="text-field">
+    <input id="password" class="input-base__input" type="password" name="password" placeholder="Password" required>
+    <label for="password" class="text-field__label">Password</label>
+  </div>
+</div>
+                            </div>
+                            
+                            <div class="form__action">
+                                <button type="submit">Login</button>
+                                <div class="sub__actions">
+                                    <a href="/register.html">Don't have an account ?</a>
+                                    <a href="#" data-hystmodal="#forgotPassword">Forgot password</a>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+         </main>
+         <footer></footer>
+<div class="hystmodal" id="forgotPassword" aria-hidden="true">
+  <div class="hystmodal__wrap">
+      <div class="hystmodal__window baseModal" role="dialog" aria-modal="true">
+          <span data-hystclose class="ico-close"></span>
+          <div class="form__data">
+           <div class="form__header">
+               <p class="title">Reset password</p>
+           </div>
+           <form action="" method="">
+              <div class="form__fields">
+                <div class="form-control form-control--fullwidth">
+  <div class="text-field">
+    <input id="reEmail" class="input-base__input" type="email" name="email" placeholder="" required>
+    <label for="reEmail" class="text-field__label">Email</label>
+  </div>
+</div>
+              </div>
+              <div class="form__action">
+                <button type="submit" disabled>Send code</button>
+              </div>
+           </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div class="hystmodal" id="addReview" aria-hidden="true">
+  <div class="hystmodal__wrap">
+      <div class="hystmodal__window baseModal" role="dialog" aria-modal="true">
+          <span data-hystclose class="ico-close"></span>
+          <div class="form__data">
+           <div class="form__header">
+               <p class="title">Leave a Review</p>
+           </div>
+           <form action="" method="">
+              <div class="form__fields">
+                <div class="rating__wrapper">
+                  <div class="head">Rate the product</div>
+                  <div class="rate__wrapper">
+                                      <span class="value">0.0</span>
+                  <div class="rating__stars" data-selected="0">
+                    <i class="ico-star" data-value="1"></i>
+                    <i class="ico-star" data-value="2"></i>
+                    <i class="ico-star" data-value="3"></i>
+                    <i class="ico-star" data-value="4"></i>
+                    <i class="ico-star" data-value="5"></i>
+                  </div>
+                  <input type="hidden" name="rating" value="0">
+                  </div>
+                </div>
+                <textarea name="" id="" placeholder="Enter the comment">
+
+                </textarea>
+              </div>
+              <div class="form__action">
+                <button type="submit" disabled>Send code</button>
+              </div>
+           </form>
+          </div>
+      </div>
+  </div>
+</div>
+<script src="files/swiper-bundle.min.js"></script>
+<script src="files/venobox.min.js"></script>
+<script src="files/hystmodal.min.js"></script>
+<script src="files/slimselect.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+<script src="js/app.min.js"></script>
+      </div>
+   </div>
+   <script>
+    import { init, showSystemMessage, openModal, closeModal } from './modules/modals.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  init();
+  // Пример уведомления:
+  showSystemMessage('Welcome!', 'success');
+  // Открыть модалку:
+  // openModal('#myModal');
+});
+
+</script>
+</body>
+</html>

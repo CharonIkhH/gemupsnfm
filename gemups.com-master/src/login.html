@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/basic/head.html',{
+   "title":"",
+   "desc":"",
+   "keys":"",
+   "ogtype":"",
+   "ogurl":"",
+   "ogtitle":"",
+   "ogdescription":"",
+   "ogsitename":"",
+   "ogimage":"",
+})
+<body>
+
+   <div class="page__wrapper">
+      @@include('html/components/sideNavDesktop.html',{})
+      <div class="main__content">
+          @@include('html/basic/header-noauth.html', {})
+          <main>
+            @@include('html/components/breadcrumbs.html', {
+               "name":"Login"
+            })
+            <div class="fullscreen container">
+                <div class="form__wrapper">
+                    <div class="form__header">
+                        <h1>Login</h1>
+                        <p>Дополнительный вспомогательный текст при необходимости.</p>
+                    </div>
+                    <form class="formBody" id="auth">
+                            <div class="form__fields">
+                                <!-- Username/Email field -->
+                                @@include('html/elements/forms/input-placetop.html',{
+                                    'id':'username-email',
+                                    'type':'text',
+                                    'name':'email',
+                                    'placeholder':'',
+                                    'Label':'Username or Email',
+                                    'required':'required'
+                                })                            
+                                <!-- Password field -->
+                                @@include('html/elements/forms/input-placetop.html',{
+                                    'id':'password',
+                                    'type':'password',
+                                    'name':'password',
+                                    'placeholder':'Password',
+                                    'Label':'Password',
+                                    'required':'required'
+                                })
+                            </div>
+                            
+                            <div class="form__action">
+                                <button type="submit">Login</button>
+                                <div class="sub__actions">
+                                    <a href="/register.html">Don't have an account ?</a>
+                                    <a href="#" data-hystmodal="#forgotPassword">Forgot password</a>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+         </main>
+         @@include('html/basic/footer.html',{})
+      </div>
+   </div>
+   <script>
+    import { init, showSystemMessage, openModal, closeModal } from './modules/modals.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  init();
+  // Пример уведомления:
+  showSystemMessage('Welcome!', 'success');
+  // Открыть модалку:
+  // openModal('#myModal');
+});
+
+</script>
+</body>
+</html>

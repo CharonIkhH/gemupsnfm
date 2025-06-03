@@ -1,0 +1,47 @@
+<header class="noauth">
+   <div class="header__wrapper">
+      <div class="leftSide">
+         <a href="#" title="name">
+            <img src="@img/logo/logo_icon.svg" alt="name">
+         </a>
+      </div>
+      <div class="rightSide">
+         @@include('../elements/header/langSwitch.html',{})
+         @@include('../elements/header/autchActions.html',{})
+         @@include('../elements/header/cart.html',{})
+         @@include('../elements/header/burger.html',{})
+      </div>
+      <div class="mobileMenu__wrapper">
+         <div class="head__area">
+            @@include('../elements/header/langSwitch.html',{})
+            <button class="closeMenu">
+               <i class="ico-close"></i>
+            </button>
+         </div>
+         <div class="mainMenu__wrapper">
+            <div class="menu__element">
+               <span class="menuHead">Menu</span>
+               <nav class="mobNav__wrapper">
+                  <ul class="mobNav">
+                     <li class="mobNav__item">
+                        <i class="ico-shield"></i>
+                        <a href="#" title="name">Proxy</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="menu__element">
+               <span class="menuHead">Support</span>
+               <nav class="mobNav__wrapper">
+                  <ul class="mobNav">
+                     <li class="mobNav__item">
+                        <i class="ico-details"></i>
+                        <a href="#" title="name">Help</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>

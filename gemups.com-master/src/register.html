@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/basic/head.html',{
+   "title":"",
+   "desc":"",
+   "keys":"",
+   "ogtype":"",
+   "ogurl":"",
+   "ogtitle":"",
+   "ogdescription":"",
+   "ogsitename":"",
+   "ogimage":"",
+})
+<body>
+
+   <div class="page__wrapper">
+      @@include('html/components/sideNavDesktop.html',{})
+      <div class="main__content">
+          @@include('html/basic/header-noauth.html', {})
+          <main>
+            @@include('html/components/breadcrumbs.html', {
+               "name":"Register"
+            })
+            <div class="fullscreen container">
+                <div class="form__wrapper">
+                    <div class="form__header">
+                        <h1>Register</h1>
+                        <p>Дополнительный вспомогательный текст при необходимости.</p>
+                    </div>
+                    <form class="formBody form" id="auth">
+                            <div class="form__fields">
+                                <!-- Username/Email field -->
+                                @@include('html/elements/forms/input-placetop.html',{
+                                    'id':'Username',
+                                    'type':'text',
+                                    'name':'name',
+                                    'placeholder':'',
+                                    'Label':'Username',
+                                    'required':'required'
+                                })                            
+                                <!-- Email field -->
+                                @@include('html/elements/forms/input-placetop.html',{
+                                    'id':'email',
+                                    'type':'email',
+                                    'name':'email',
+                                    'placeholder':'Password',
+                                    'Label':'Email',
+                                    'required':'required'
+                                })
+                                <!-- Password field -->
+                                @@include('html/elements/forms/input-placetop.html',{
+                                    'id':'password',
+                                    'type':'password',
+                                    'name':'password',
+                                    'placeholder':'Password',
+                                    'Label':'Password',
+                                    'required':'required'
+                                })
+                                <!-- Password field -->
+                                @@include('html/elements/forms/input-placetop.html',{
+                                    'id':'refferal',
+                                    'type':'text',
+                                    'name':'refferal',
+                                    'placeholder':'Refferal Code (Optional)',
+                                    'Label':'Refferal Code (Optional)',
+                                    'required':''
+                                })
+                            </div>
+                            
+                            <div class="form__action">
+                                <button type="submit" disabled>Register</button>
+                                <div class="sub__actions">
+                                    <a href="/login.html">Already have an account ?</a>
+                                </div>
+                            </div>
+                    </form>
+                </div>
+            </div>
+         </main>
+         @@include('html/basic/footer.html',{})
+      </div>
+   </div>
+</body>
+<script>
+    import { init, showSystemMessage, openModal, closeModal } from './modules/modals.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  init();
+  // Пример уведомления:
+  showSystemMessage('Welcome!', 'success');
+  // Открыть модалку:
+  // openModal('#myModal');
+});
+
+</script>
+</html>

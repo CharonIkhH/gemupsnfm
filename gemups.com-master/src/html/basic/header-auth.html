@@ -1,0 +1,100 @@
+<header class="auth">
+   <div class="header__wrapper">
+      <div class="leftSide">
+         <a href="#" title="name">
+            <img src="@img/logo/logo_icon.svg" alt="name">
+         </a>
+      </div>
+      <div class="rightSide">
+         @@include('../elements/header/langSwitch.html',{})
+         <div class="cash__wrapper">
+            <i class="ico-wallet"></i>
+            <a href="#" class="billing">
+               <span class="value">0.00</span>
+               <span class="currency">$</span>
+            </a>
+         </div>
+         <div class="user__wrapper">
+            <div class="user__name">
+               <i class="ico-user"></i>
+               <span>User name</span>
+            </div>
+            <i class="ico-arrow"></i>
+            <div class="userMenu">
+               <ul class="userMenu__items">
+                  <li class="userMenu__item">
+                     <a href="#" title="">
+                        <i class="ico-user"></i>
+                        My Profile
+                     </a>
+                  </li>
+                  <li class="userMenu__item">
+                     <a href="#" title="">
+                        <i class="ico-cart-bag"></i>
+                        My Purchases
+                     </a>
+                  </li>
+                  <li class="userMenu__item">
+                     <a href="#" title="">
+                        <i class="ico-arrow-menu-left"></i>
+                        Transactions
+                     </a>
+                  </li>
+                  <li class="userMenu__item">
+                     <a href="#" title="">
+                        <i class="ico-tag"></i>
+                        Seller
+                     </a>
+                  </li>
+                  <li class="userMenu__item">
+                     <a href="#" title="">
+                        <i class="ico-users"></i>
+                        Referral
+                     </a>
+                  </li>
+                  <li class="userMenu__item logout">
+                     <a href="#" title="">
+                        <i class="ico-logout"></i>
+                        Logout
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+         @@include('../elements/header/cart.html',{})
+         @@include('../elements/header/burger.html',{})
+      </div>
+      <div class="mobileMenu__wrapper">
+         <div class="head__area">
+            @@include('../elements/header/langSwitch.html',{})
+            <button class="closeMenu">
+               <i class="ico-close"></i>
+            </button>
+         </div>
+         <div class="mainMenu__wrapper">
+            <div class="menu__element">
+               <span class="menuHead">Menu</span>
+               <nav class="mobNav__wrapper">
+                  <ul class="mobNav">
+                     <li class="mobNav__item">
+                        <i class="ico-shield"></i>
+                        <a href="#" title="name">Proxy</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+            <div class="menu__element">
+               <span class="menuHead">Support</span>
+               <nav class="mobNav__wrapper">
+                  <ul class="mobNav">
+                     <li class="mobNav__item">
+                        <i class="ico-details"></i>
+                        <a href="#" title="name">Help</a>
+                     </li>
+                  </ul>
+               </nav>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>
