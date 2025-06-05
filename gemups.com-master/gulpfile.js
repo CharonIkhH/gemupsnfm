@@ -12,6 +12,7 @@ global.app = {
 }
 
 import { copy } from "./gulp/tasks/copy.js";
+import { copyFlags } from "./gulp/tasks/copyFlags.js";
 import { reset } from "./gulp/tasks/reset.js";
 import { html } from "./gulp/tasks/html.js";
 import { server } from "./gulp/tasks/server.js";
@@ -34,7 +35,7 @@ function watcher() {
 export { svgSprive }
 
 const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images));
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, copyFlags));
 //const mainTasks = gulp.parallel(copy, html, scss, js, images);
 
 const dev = gulp.series(reset, svgSprive, mainTasks, gulp.parallel(watcher, server));

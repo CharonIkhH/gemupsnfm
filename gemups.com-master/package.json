@@ -51,6 +51,7 @@
     "webpack-stream": "^7.0.0"
   },
   "dependencies": {
+    "flag-icon-css": "^3.5.0",
     "normalize.css": "^8.0.1"
   }
 }

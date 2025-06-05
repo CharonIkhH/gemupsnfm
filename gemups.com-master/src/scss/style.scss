@@ -2,6 +2,7 @@
 @import "base/normalize";
 //@import "base/optimize";
 @import "fonts";
+@import "flag-icon-css/sass/flag-icon";
 @import "mixins";
 @import "animations";
 @import "standart";
@@ -12,16 +13,21 @@
 @import "ui/forms";
 
 // 2. Элементы
+
 @import "elements/breadcrumbs";
 @import "elements/verify-message";
 @import "elements/comment-item";
+@import "elements/product-item";
 @import "elements/tabs";
+@import "elements/canvasChart";
+
 // 3. Компоненты
 @import "components/header";
 @import "components/sideNavDesktop";
 @import "components/headers/pageHeader";
 @import "components/tagFilters";
 @import "components/tables/contentFilter";
+@import "components/generatedArea";
 
 // 4. Секции / Сквозные секции
 @import "sections/comments";
@@ -30,6 +36,8 @@
 // 5. Модальные окна
 @import "modals/base";
 @import "modals/sendPass";
+@import "modals/addReview";
+@import "modals/cart";
 
 // 6. Страницы
 @import "pages/auth";
@@ -79,288 +87,6 @@ span {
             line-height: 125%;
          }
       }
-   }
-}
-
-.product__item {
-   padding: 1.25rem;
-   border-radius: .75rem;
-   border: 1px solid $gray-stoke;
-   position: relative;
-   background-color: #090e15;
-   transition: ease-in-out .5s;
-   .product {
-      
-      .product__wrapper {
-         position: relative;
-         min-height: 250px;
-         display: flex;
-         flex-direction: column;
-         justify-content: space-between;
-         .product__tags {
-            display: flex;
-            flex-direction: row;
-            gap: .25rem;
-            span {
-               background-color: $black-elementBG;
-               line-height: 100%;
-               display: flex;
-               align-items: center;
-               justify-content: center;
-               &.tag {
-                  padding: .35rem .5rem;
-                  font-size: .7rem;
-                  border-radius: 1rem;
-                  color: $text-secondory;
-
-               }
-               &.icon {
-                  padding: .25rem;
-                  font-size: 1rem;
-                  border-radius: 50%;
-                  color: $main-Green;
-               }
-               &.active {
-                  color: $main-Green;
-               }
-            }
-         }
-         .product__data {
-            
-            .product__img {
-               display: flex;
-               justify-content: center;
-               padding: .5rem 0;
-               img {
-                  width: auto;
-                  height: 100%;
-                  max-height: 80px;
-                  max-width: auto;
-               }
-            }
-            .data__wrapper {
-               display: flex;
-               flex-direction: row;
-               justify-content: space-between;
-               margin-bottom: 0.5rem;
-               .left__side {
-                  display: flex;
-                  align-items: center;
-                  gap: .5rem;
-                  .rating__wrapper {
-                     display: flex;
-                     align-items: center;
-                     gap: 0.25rem;
-                     background-color: #13f1951a;
-                     padding: .35rem;
-                     border-radius: .25rem;
-                     i {
-                        font-size: .7rem;
-                        color: $main-Green;
-                     }
-                     .rating {
-                        font-size: .7rem;
-                        line-height: 100%;
-                     }
-                  }
-                  .name {
-                     font-size: 0.9rem;
-                     line-height: 100%;
-                  }
-               }
-               .right__side {
-                  display: flex;
-                  align-items: center;
-                  gap: .35rem;
-                  .avatars__wrapper {
-                     display: flex;
-                     img {
-                        border-radius: 50%;
-                        border: 2px solid $body-bg;
-                        width: 1.6rem;
-                        height: 1.6rem;
-                        margin-left: -.5rem;
-                     }
-                  }
-                  .seller {
-                     font-size: 0.75rem;
-                     line-height: 100%;
-                  }
-               }
-            }
-            .content__area {
-               display: flex;
-               flex-direction: column;
-               width: 100%;
-               height: auto;
-               min-height: 3rem;
-               justify-content: space-between;
-               transition: all 0.5s ease-in-out;
-               z-index: 5;
-               background-color: #090e15;
-               &.open {
-                  position: absolute;
-                  top: 0;
-                  left: 0;
-                  z-index: 10;
-                  width: 100%;
-                  height: 86%;
-                  transition: all 0.5s ease-in-out;
-               }
-               .name {
-                  @include adaptiv-font(.9,.8);
-                  text-align: center;
-               }
-               .sub__content {
-                  opacity: 0;
-                  visibility: hidden;
-                  height: 0;
-                  transition: ease-in-out .5s;
-                  &.active {
-                     opacity: 1;
-                     visibility: visible;
-                     height: auto;
-                  }
-                  p {
-                     color: $text-secondory;
-                     font-size: 0.8rem;
-                     text-align: center;
-                  }
-               }
-               button {
-                  width: 100%;
-                  padding: .5rem 0;
-                  color: $text-secondory;
-               }
-            }
-         }
-         .buttom {
-            display: flex;
-            justify-content: space-between;
-            gap: 1rem;
-            align-items: center;
-            .price {
-               padding: .5rem;
-               background-color: $black-elementBG;
-               display: flex;
-               gap: 0;
-               border-radius: .25rem;
-               .currency, .value {
-                  color: $main-Green;
-                  @include adaptiv-font(.8,.7);
-                  line-height: 100%;
-               }
-            }
-            .itemsLeft {
-               display: flex;
-               flex-direction: column;
-               align-items: center;
-               gap: 0.25rem;
-               span.desk {
-                  font-size: .85rem;
-                  line-height: 100%;
-                  font-weight: 400;
-                  color: $text-secondory;
-                  margin-bottom: 0.25rem;
-                  span {
-                     line-height: 100%;
-                     font-size: 0.85rem;
-                     font-weight: 700;
-                     color: #fff;
-                  }
-               }
-               .progress-bar {
-                  position: relative;
-                  width: 100%;
-                  height: 4px;
-                  background-color: #ccc;
-                  border-radius: 3px;
-                  overflow: hidden;
-               }
-               .remaining {
-                  height: 100%;
-                  width: var(--remaining);
-                  background-color: $main-Green;
-                  transition: width 0.3s;
-               }
-               .value {
-                  position: absolute;
-                  top: -20px;
-                  right: 0;
-                  font-size: 12px;
-                  color: $gray500;
-                  user-select: none;
-               }
-            }
-            .order__action {
-               display: flex;
-               z-index: 2;
-               position: relative;
-               button {
-                  padding: .5rem;
-                  background-color: $black-elementBG;
-                  border-radius: .5rem;
-                  i {
-                     color: $main-Green;
-                  }
-               }
-               .order__counter {
-            position: absolute;
-            top: -2.25rem;
-            right: 0;
-            opacity: 0;
-            pointer-events: none;
-            transform: translateY(-5px);
-            transition: opacity 0.3s ease, transform 0.3s ease;
-
-            &.active {
-               opacity: 1;
-               pointer-events: auto;
-               transform: translateY(0);
-            }
-
-            form {
-               display: flex;
-               gap: .25rem;
-               align-items: center;
-               justify-content: stretch;
-
-               button {
-                  width: 1.5rem;
-                  height: 1.5rem;
-                  color: $main-Green;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  border-radius: .25rem;
-               }
-
-               input {
-                  background-color: $black-elementBG;
-                  border: none;
-                  outline: none;
-                  border-radius: .25rem;
-                  max-width: 60px;
-                  padding: .25rem .25rem;
-                  text-align: center;
-                  color: $main-Green;
-                  font-size: 0.8rem;
-                  line-height: 100%;
-                  &::placeholder {
-                  color: $main-Green;
-                  font-size: 0.8rem;
-                  line-height: 100%;
-                  }
-               }
-            }
-            }
-
-            }
-         }
-      }
-   }
-   &:hover {
-      border: 1px solid $main-Green;
    }
 }
 
@@ -415,19 +141,37 @@ span {
    display: grid;
    grid-template-columns: auto 30%;
    gap: 1rem;
-   margin-bottom: 3rem;
+   margin-bottom: 2rem;
    .mainContent {
       display: flex;
       flex-direction: column;
       gap: 1rem;
    }
-   .sideData {
-      
+   .sideData {      
       border-radius: 1rem;
       display: flex;
       flex-direction: column;
       gap: 1rem;
    }
+}
+
+@media screen and (max-width:767px) {
+   .innerContent__wrapper {
+   grid-template-columns: auto;
+   gap: 1rem;
+   margin-bottom: 1rem;
+   .mainContent {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+   }
+   .sideData {      
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+   }
+}
 }
 
 .order__dataWrapper {
@@ -935,4 +679,10 @@ span {
    }
 }
 
-
+.sideData {
+   background-color: $black-elementBG;
+   .side__content {
+      padding: 1.5rem;
+      
+   }
+}
